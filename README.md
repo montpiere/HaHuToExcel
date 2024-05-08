@@ -15,7 +15,7 @@ Az alkalmazás futtatásához a [Python](https://www.python.org/downloads/) kere
 ## Használat:
 A hasznaltauto.hu-n megadott keresési találatok linkjét kell bemásolni a `links.txt` fájlba. 
 A fájlban több keresési találat is megadható, minden linket csak egy új sorban kell megadni, így több tipust is össze tudunk hasonlítani. 
-A program futattása után a táblázatba mentett adatok (ha az Excel telepítve van) automatikusan megnyílik. 
+A program futattása után a táblázat (ha az Excel telepítve van) automatikusan megnyílik. 
 
 **Program indítása:**
 
