@@ -1,55 +1,31 @@
-# Application name
+# HaHuToExcel
 
-- [Application name](#application-name)
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Configuration](#configuration)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Authors](#authors)
-  - [Acknowledgments](#acknowledgments)
-  - [Changelog](#changelog)
-  - [Resources](#resources)
+## Leírás:
+Az alkalmazás a hasznaltauto.hu keresési találatainak Excel (.xlsx) fájlba mentését tudja megcsinálni.
+Az Excel fájlban szűréseket, statisztikákat tudunk egyszerűbben és gyorsabban elvégezni különböző paraméterek alapján.
 
 
-## Description:
+## Telepítés:
+Az alkalmazás futtatásához a [Python](https://www.python.org/downloads/) keretrendszer telepítése szükséges.
 
-A brief overview of the project, explaining its purpose and main features.
+**Függőségek telepítése:**
 
+`pip install -r requirements.txt`
 
-## Installation:
+## Használat:
+A hasznaltauto.hu-n megadott keresési találatok linkjét kell bemásolni a `links.txt` fájlba. 
+A fájlban több keresési találat is megadható, minden linket csak egy új sorban kell megadni. 
+A program futattása után ezek egy Excel táblában fognak megjelenni, így több tipust is össze tudunk hasonlítani. 
 
-Instructions on how to install and set up the project, including any prerequisites and dependencies.
+**Program indítása:**
 
-## Usage:
-
-Examples and instructions on how to use the project, such as running scripts or calling functions.
-
-## Configuration:
-
-Details on how to configure the project to suit your needs, if applicable.
-
-## Contributing:
-
-Information on how to contribute to the project, including guidelines for code contributions, pull requests, and issue tracking.
+`python hahutoexcel.py`
 
 ## License:
-
-Information about the project's licensing, often with a link to the full license text.
+MIT license
 
 ## Authors:
-
-Information about the project's authors and maintainers.
-
-## Acknowledgments:
-
-Credit to any libraries or projects used within the project, as well as any individuals who have contributed.
-
-## Changelog:
-
-A list of recent changes and updates to the project.
+montpiere.gh@gmail.com
 
 ## Resources:
-
 Links to additional resources such as official documentation, forums, or support channels.
