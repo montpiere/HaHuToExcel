@@ -6,7 +6,7 @@ Az Excel fájlban szűréseket, statisztikákat tudunk egyszerűbben és gyorsab
 
 
 ## Telepítés:
-Az alkalmazás futtatásához a [Python](https://www.python.org/downloads/) keretrendszer telepítése szükséges.
+Az alkalmazás futtatásához a [Python](https://www.python.org/downloads/) telepítése szükséges.
 
 **Függőségek telepítése:**
 
