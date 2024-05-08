@@ -1,7 +1,7 @@
 # HaHuToExcel
 ![Alt text](hahutoexcel.jpg)
 ## Leírás:
-Az alkalmazás a hasznaltauto.hu keresési találatainak Excel (.xlsx) fájlba mentését tudja megcsinálni.
+Az alkalmazás a hasznaltauto.hu keresési találatait egy Excel (.xlsx) fájlba menti.
 Az Excel fájlban szűréseket, statisztikákat tudunk egyszerűbben és gyorsabban elvégezni különböző paraméterek alapján.
 
 
@@ -14,18 +14,13 @@ Az alkalmazás futtatásához a [Python](https://www.python.org/downloads/) kere
 
 ## Használat:
 A hasznaltauto.hu-n megadott keresési találatok linkjét kell bemásolni a `links.txt` fájlba. 
-A fájlban több keresési találat is megadható, minden linket csak egy új sorban kell megadni. 
-A program futattása után ezek egy Excel táblában fognak megjelenni, így több tipust is össze tudunk hasonlítani. 
+A fájlban több keresési találat is megadható, minden linket csak egy új sorban kell megadni, így több tipust is össze tudunk hasonlítani. 
+A program futattása után a táblázatba mentett adatok (ha az Excel telepítve van) automatikusan megnyílik. 
 
 **Program indítása:**
 
+_(a program könyvtárából futattva)_
+
 `python hahutoexcel.py`
-
-## License:
-MIT license
-
 ## Authors:
 montpiere.gh@gmail.com
-
-## Resources:
-Links to additional resources such as official documentation, forums, or support channels.
