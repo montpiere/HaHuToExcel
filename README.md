@@ -1,5 +1,5 @@
 # HaHuToExcel
-
+![Alt text](hahutoexcel.jpg)
 ## Leírás:
 Az alkalmazás a hasznaltauto.hu keresési találatainak Excel (.xlsx) fájlba mentését tudja megcsinálni.
 Az Excel fájlban szűréseket, statisztikákat tudunk egyszerűbben és gyorsabban elvégezni különböző paraméterek alapján.

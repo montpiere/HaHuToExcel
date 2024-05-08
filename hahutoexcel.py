@@ -5,19 +5,16 @@ import os
 import datetime
 import time
 
-"""
-[ ] fájlnevet kiiratni
-"""
+
 car_counter = 1
-filename = 'test.xlsx'
-time_now = datetime.datetime.now()
-date = time_now.strftime("%Y-%m-%d")
+
+filename = f'hahutoexcel-{datetime.datetime.now().strftime("%Y%m%d%H%M%S")}.xlsx'
 
 fuel_types_array = ["Benzin", "Dízel", "Benzin/Gáz", "LPG", "CNG", "Hibrid", "Hibrid (Benzin)",
                     "Hibrid (Dízel)", "Elektromos", "Etanol", "Biodízel", "Gáz"]
 
 # EXCEL
-workbook = xlsxwriter.Workbook('e:\Autovasarlas\Excel tablak\\' + filename)
+workbook = xlsxwriter.Workbook(filename)
 worksheet = workbook.add_worksheet()
 
 # cell formatting
@@ -107,19 +104,16 @@ def get_url_data(_url):
         le = '-'
         kw = '-'
 
-        # ar
         try:
             price = _data.find(class_="pricefield-primary").get_text()
         except Exception:
-            # print("Akciós hiba:", e)
             price = _data.find(class_="pricefield-primary-highlighted").get_text()
 
         price = price[:-3].replace(u'\xa0', u'')
 
         try:
             price = int(price)
-        except Exception as e:
-            print("Vételár hiba:", e)
+        except Exception:
             price = '-'
 
         # additional info
@@ -130,20 +124,16 @@ def get_url_data(_url):
                 uzemanyag = add_info_data
 
             elif 'km' in add_info_data:
-                km = add_info_data[:-2]
-                km = int(km)
+                km = int(add_info_data[:-2])
 
             elif 'cm³' in add_info_data:
-                kbcm = add_info_data[:-3]
-                kbcm = int(kbcm)
+                kbcm = int(add_info_data[:-3])
 
             elif 'LE' in add_info_data:
-                le = add_info_data[:-2]
-                le = int(le)
+                le = int(add_info_data[:-2])
 
             elif 'kW' in add_info_data:
-                kw = add_info_data[:-2]
-                kw = int(kw)
+                kw = int(add_info_data[:-2])
 
             else:
                 evjarat = add_info_data
@@ -175,7 +165,6 @@ def get_url_data(_url):
     def get_page_data(_soup):
         return _soup.find(class_="list-view").select('div[class*="row talalati-sor"]')
 
-    # function main
     soup_main_page = get_soup(_url)
     page_numbers = get_page_numbers(soup_main_page)
 
@@ -199,13 +188,13 @@ def getdata():
         get_url_data(url)
     # get_url_data(urls[0])
 
-    # close Excel file process
+    # close work with Excel file
     workbook.close()
     print("")
     print("A fájl elkészült. " + filename + " - excel fájl megnyitása...")
 
     # open Excel file
-    command = 'start excel.exe "e:\Autovasarlas\Excel tablak\\%s"' % (filename)
+    command = f'start excel.exe {filename}'
     os.system(command)
     print("")
     print("Running time :  %s seconds" % (time.time() - start_time))
